@@ -1,0 +1,68 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res70/80000/80259-Misiones-Province.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background: #77b7db;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.hero-button:hover {
+  background: #5a9bc7;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
+}
+

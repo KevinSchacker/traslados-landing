@@ -1,0 +1,156 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #77b7db;
+}
+
+.reserve-button {
+  background: #77b7db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.reserve-button:hover {
+  background: #5a9bc7;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #333;
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transition: 0.3s;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  bottom: -8px;
+}
+
+/* Language Selector */
+.language-selector {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.language-selector button {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.language-selector button.active {
+  background-color: #77b7db;
+  color: white;
+}
+
+.language-selector button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu-icon.open {
+    background: transparent;
+  }
+
+  .menu-icon.open::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .menu-icon.open::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  .language-selector {
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+

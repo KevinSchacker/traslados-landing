@@ -1,0 +1,138 @@
+.about {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.vehicle-showcase {
+  margin-top: 60px;
+}
+
+.vehicle-showcase-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.vehicle-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vehicle-info {
+  padding: 20px;
+}
+
+.vehicle-name {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.vehicle-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.vehicle-capacity {
+  font-size: 0.9rem;
+  color: #77b7db;
+  font-weight: bold;
+}
+
+/* Animaciones */
+.about.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100px);
+  transition: all 1s;
+}
+
+.about.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.vehicle-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about.show .vehicle-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about.show .vehicle-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.about.show .vehicle-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.about.show .vehicle-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about-title,
+  .vehicle-showcase-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
